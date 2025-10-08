@@ -1,0 +1,132 @@
+body {
+    font-family: Geneva;
+    background: linear-gradient(135deg, #800440, #fb80b1);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    font-family: Geneva;
+    text-align: center;
+    max-width: 600px;
+    width: 80%;
+}
+
+h1 { 
+    font-size: 50px;
+    font-family: Geneva;
+}
+
+p { 
+    font-size: 20px;
+    font-family: Geneva;
+}
+
+.category-buttons { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category-buttons button {
+    font-size: 20px; 
+    font-weight: bold;
+    font-family: Geneva;
+    background: #ff416c; 
+    border: none; 
+    border-radius: 50px; 
+    color:white;
+    cursor: pointer; 
+}
+
+#scrambled { 
+    font-size: 20px;
+    margin: 5px 0;
+    font-family: Geneva;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+input { 
+    padding: 12px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    font-family: Geneva;
+    text-align: center;
+}
+
+button {
+    padding:20px 20px;
+    font-size: 20px;
+    font-family: Geneva;
+    margin-top: 20px;
+    border: none;
+    border-radius: 50px;
+    background: #ffffff;
+    color: #ff416c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0); 
+}
+
+#game-screen button:last-of-type {
+    background: white;
+    font-family: Geneva;
+    margin-top: 15px;
+}
+
+#result { 
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: Geneva;
+    font-weight: bold;
+}
+
+#leaderboard-table { 
+    width:100%; 
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: Geneva;
+}
+
+#leaderboard-table th, #leaderboard-table td {
+    padding: 10px;
+    text-align: center;
+    font-family: Geneva;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+#leaderboard-table th {
+    background: rgba(164, 160, 160, 0.2);
+    border-radius: 10px;
+}
+
+#leaderboard-table tr:nth-child(even) {
+    background: rgba(255,255,255,0.1);
+}
+
+.flash-correct { 
+    animation: flashGreen 0.5s;
+}
+
+.flash-wrong {
+    animation: flashRed 0.5s;
+}
+
+@keyframes flashGreen { 0% { background-color: rgba(6, 255, 6, 0.511);} 100% { background-color:transparent;} }
+@keyframes flashRed { 0% { background-color: rgba(255, 0, 0, 0.459);} 100% { background-color:transparent;} }

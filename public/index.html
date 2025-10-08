@@ -2,19 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Word Scramble</title>
+  <title>UNSCRAMBLE</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Unscramble Words Game</h1>
+
+<!--Main Home Screen-->
+  <div class="container" id="home-screen">
+    <h1>UNSCRAMBLE</h1>
+    <P> Unscramble as many words as you can in 60 seconds!</P>
+    <p> Pick a category:</p>
+    <div class="category-buttons">
+      <button onclick="startGame('states')">States</button>
+      <button onclick="startGame('foods')">Foods</button>
+      <button onclick="startGame('restaurants')">Restaurants</button>
+      <button onclick="startGame('movies')">Movies</button>
+    </div>
+    <button onclick="showLeaderboard()">Leaderboard 🏆</button>
+  </div>
+
+<!-- Game Screen -->
+  <div class="container" id="game-screen" style="display:none;">
+    <h1>UNSCRAMBLE</h1>
     <p id="timer">Time: 60</p>
     <div id="scrambled"></div>
-    <input id="guess" placeholder="Your guess" />
-    <button onclick="checkGuess()">Submit</button>
+    <input id="guess" placeholder="Enter your guess here" />
+    <button onclick="checkGuess()">⮑Submit</button>
     <p id="result"></p>
     <p>Score: <span id="score">0</span></p>
+    <button onclick="goHome()">Back to Home</button>
   </div>
+
+<!-- Leaderboard Screen -->
+  <div class="container" id="leaderboard-screen" style="display:none;">
+    <h1>🏆 Leaderboard</h1>
+    <table id="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>User</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-list"></tbody>
+    </table>
+    <button onclick="goHomeFromLeaderboard()">Back to Home</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
+
